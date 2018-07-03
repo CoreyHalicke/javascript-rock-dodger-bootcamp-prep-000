@@ -39,7 +39,7 @@ function createRock(x) {
 
   var top = rock.style.top = 0
   
-    //window.requestAnimationFrame()
+    window.requestAnimationFrame()
     
     
     GAME.appendChild(rock)
