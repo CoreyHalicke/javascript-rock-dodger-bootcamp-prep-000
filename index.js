@@ -77,10 +77,10 @@ function moveDodger(e) {
   // implement me!
         document.addEventListener('keydown', function(e) {
         if (e.which === RIGHT_ARROW) {
-          moveDodgerRight()
+          return moveDodgerRight()
         }
         if (e.which === LEFT_ARROW) {
-          moveDodgerLeft()
+          return moveDodgerLeft()
         }
       })
   /**
