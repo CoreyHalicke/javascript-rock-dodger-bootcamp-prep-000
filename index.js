@@ -72,7 +72,7 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  var rock = 0
+  ROCKS = []
   
 }
 
