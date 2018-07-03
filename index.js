@@ -56,7 +56,7 @@ function createRock(x) {
     // (use the comments below to guide you!)
     
   if (checkCollision) {
-    return endGame()
+    endGame()
   }
     /**
      * If a rock collides with the DODGER,
