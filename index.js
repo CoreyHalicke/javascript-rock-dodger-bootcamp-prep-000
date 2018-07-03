@@ -40,7 +40,7 @@ function createRock(x) {
   var top = rock.style.top = 0
   
   GAME.appendChild(rock)
-
+window.requestAnimationFrame(moveRock)
   function moveRock() {
     // implement me!
     rock.style.top = `${top += 2}px`
@@ -69,7 +69,7 @@ function createRock(x) {
      */
      
   }
-    window.requestAnimationFrame(moveRock)
+    
   // We should kick of the animation of the rock around here
 
   // Add the rock to ROCKS so that we can remove all rocks
