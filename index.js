@@ -40,7 +40,6 @@ function createRock(x) {
   var top = 0
   rock.style.top = top
 
-
   window.requestAnimationFrame()
   /**
    * Now that we have a rock, we'll need to append
