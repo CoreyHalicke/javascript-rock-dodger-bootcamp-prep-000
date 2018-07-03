@@ -70,17 +70,17 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  alert ('YOU LOSE!')
+  alert ('YOU LOSE!');
 }
 
 function moveDodger(e) {
   // implement me!
         document.addEventListener('keydown', function(e) {
         if (e.which === RIGHT_ARROW) {
-          return moveDodgerRight()
+          return moveDodgerRight();
         }
         if (e.which === LEFT_ARROW) {
-          return moveDodgerLeft()
+          return moveDodgerLeft();
         }
       })
   /**
