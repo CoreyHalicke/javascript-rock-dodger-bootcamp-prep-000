@@ -65,14 +65,12 @@ function createRock(x) {
 }
 
 /**
- * End the game by clearing `gameInterval`,
  * removing all ROCKS from the DOM,
  * and removing the `moveDodger` event listener.
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
   clearInterval(gameInterval);
-  window.cancelAnimationFrame(ROCKS)
   
 }
 
