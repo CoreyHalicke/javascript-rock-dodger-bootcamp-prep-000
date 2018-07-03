@@ -73,7 +73,7 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
     if (rock.style.top == 20) {
-      
+      window.cancelAnimationFrame()
     }
     /**
      * But if the rock *has* reached the bottom of the GAME,
