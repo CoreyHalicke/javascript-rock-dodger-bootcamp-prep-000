@@ -40,7 +40,7 @@ function createRock(x) {
   var top = rock.style.top = 0
   
   GAME.appendChild(rock)
-window.requestAnimationFrame(moveRock)
+
   function moveRock() {
     // implement me!
     rock.style.top = `${top += 2}px`
@@ -67,7 +67,7 @@ window.requestAnimationFrame(moveRock)
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-     
+     window.requestAnimationFrame(moveRock)
   }
     
   // We should kick of the animation of the rock around here
