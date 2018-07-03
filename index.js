@@ -76,10 +76,10 @@ function endGame() {
 function moveDodger(e) {
   // implement me!
         document.addEventListener('keydown', function(e) {
-        if (e.which === 39) {
+        if (e.which === RIGHT_ARROW) {
           moveDodgerRight()
         }
-        if (e.which === 37) {
+        if (e.which === LEFT_ARROW) {
           moveDodgerLeft()
         }
       })
@@ -94,6 +94,7 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
+  
   /**
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
