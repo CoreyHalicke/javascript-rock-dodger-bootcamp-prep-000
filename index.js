@@ -39,7 +39,7 @@ function createRock(x) {
 
   var top = rock.style.top = 0
   
-    window.requestAnimationFrame()
+    
     
     
     GAME.appendChild(rock)
@@ -56,7 +56,7 @@ function createRock(x) {
   function moveRock() {
     // implement me!
     rock.style.top = `${top += 2}px`
-    
+    window.requestAnimationFrame()
     // (use the comments below to guide you!)
     
     if (checkCollision(rock)) {
@@ -80,6 +80,7 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
+     
   }
 
   // We should kick of the animation of the rock around here
