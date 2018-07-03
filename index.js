@@ -1,16 +1,16 @@
 /**
  * Don't change these constants!
  */
-const DODGER = document.getElementById('dodger')
-const GAME = document.getElementById('game')
-const GAME_HEIGHT = 400
-const GAME_WIDTH = 400
-const LEFT_ARROW = 37 // use e.which!
-const RIGHT_ARROW = 39 // use e.which!
-const ROCKS = []
-const START = document.getElementById('start')
+const DODGER = document.getElementById('dodger');
+const GAME = document.getElementById('game');
+const GAME_HEIGHT = 400;
+const GAME_WIDTH = 400;
+const LEFT_ARROW = 37; // use e.which!
+const RIGHT_ARROW = 39; // use e.which!
+const ROCKS = [];
+const START = document.getElementById('start');
 
-var gameInterval = null
+var gameInterval = null;
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);
@@ -32,36 +32,36 @@ function checkCollision(rock) {
 }
 
 function createRock(x) {
-  const rock = document.createElement('div')
+  const rock = document.createElement('div');
 
-  rock.className = 'rock'
-  rock.style.left = `${x}px`
+  rock.className = 'rock';
+  rock.style.left = `${x}px`;
 
-  var top = rock.style.top = 0
+  var top = rock.style.top = 0;
   
-  GAME.appendChild(rock)
+  GAME.appendChild(rock);
 
   function moveRock() {
     // implement me!
-    rock.style.top = `${top += 2}px`
+    rock.style.top = `${top += 2}px`;
     
     // (use the comments below to guide you!)
     
     if (checkCollision(rock)) {
-      return endGame()
+      return endGame();
     }
 
     if (top < GAME_HEIGHT) {
-      window.requestAnimationFrame(moveRock)
+      window.requestAnimationFrame(moveRock);
     } else {
-      rock.remove()
+      rock.remove();
     }
   }
-    window.requestAnimationFrame(moveRock)
+    window.requestAnimationFrame(moveRock);
 
-  ROCKS.push(rock)
+  ROCKS.push(rock);
 
-  return rock
+  return rock;
 }
 
 /**
@@ -71,7 +71,8 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  clearInterval(gameInterval)
+  clearInterval(gameInterval);
+  
   
 }
 
