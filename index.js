@@ -69,6 +69,9 @@ function createRock(x) {
  * and removing the `moveDodger` event listener.
  */
 function endGame() {
+  ROCKS.forEach(function(rock){
+    rock.remove()
+  })
   clearInterval(gameInterval);
   alert ('YOU LOSE!');
 }
