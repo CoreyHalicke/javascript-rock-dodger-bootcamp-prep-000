@@ -77,9 +77,8 @@ function moveDodger(e) {
   // implement me!
     const code = e.which
     
-    
+    //if (code !== LEFT_ARROW || code !== RIGHT_ARROW){
     if ([LEFT_ARROW, RIGHT_ARROW].indexOf(code) > -1){
-      //if (code !== LEFT_ARROW || code !== RIGHT_ARROW){
         e.preventDefault()
         e.stopPropagation()
       }
