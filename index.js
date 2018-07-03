@@ -94,14 +94,12 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   // implement me!
-        function moveDodgerLeft() {
         var leftNumbers = DODGER.style.left.replace('px', '')
         var left = parseInt(leftNumbers, 10)
         
         if (left > 0) {
           DODGER.style.left = `${left - 1}px`
         }
-      }
   /**
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
@@ -110,6 +108,14 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   // implement me!
+        function moveDodgerRight() {
+        var leftNumbers = dodger.style.left.replace('px', '')
+        var left = parseInt(leftNumbers, 10)
+      
+        if (left > 0) {
+          dodger.style.left = `${left + 1}px`
+        }
+      }
   /**
    * This function should move DODGER to the right
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
