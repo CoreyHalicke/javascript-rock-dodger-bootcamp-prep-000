@@ -55,7 +55,6 @@ function createRock(x) {
     // implement me!
     rock.style.top = `${top += 2}px`
     
-    
     // (use the comments below to guide you!)
     
     if (checkCollision(rock)) {
