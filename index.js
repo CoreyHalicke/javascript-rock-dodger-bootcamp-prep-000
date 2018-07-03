@@ -1,4 +1,3 @@
-
 const DODGER = document.getElementById('dodger');
 const GAME = document.getElementById('game');
 const GAME_HEIGHT = 400;
@@ -12,6 +11,7 @@ var gameInterval = null;
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);
+
 
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
@@ -37,13 +37,11 @@ function createRock(x) {
 
   var top = rock.style.top = 0;
   
+  // appaneds rock to game
   GAME.appendChild(rock);
 
   function moveRock() {
-    // implement me!
     rock.style.top = `${top += 2}px`;
-    
-    // (use the comments below to guide you!)
     
     if (checkCollision(rock)) {
       return endGame();
@@ -62,16 +60,20 @@ function createRock(x) {
   return rock;
 }
 
-/**
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- */
 function endGame() {
+  
+  // runs through each item in the ROCKS array and removes that item
   ROCKS.forEach(function(rock){
     rock.remove()
   })
+  
+  // stops the event listener from listening to keydown
   window.removeEventListener('keydown', moveDodger)
+  
+  // clears the game interval
   clearInterval(gameInterval);
+  
+  // alerts the player they have lost
   alert ('YOU LOSE!');
 }
 
