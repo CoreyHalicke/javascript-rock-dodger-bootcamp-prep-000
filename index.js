@@ -23,9 +23,7 @@ function checkCollision(rock) {
     const rockRightEdge = rockLeftEdge + 20;
 
     if (
-      (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge)|| 
-      (rockLeftEdge >= dodgerLeftEdge && rockLeftEdge <= dodgerRightEdge)||
-      (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge)) {
+ {
       return true;
     }
   }
@@ -67,9 +65,9 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-     window.requestAnimationFrame(moveRock)
+     
   }
-    
+    window.requestAnimationFrame(moveRock)
   // We should kick of the animation of the rock around here
 
   // Add the rock to ROCKS so that we can remove all rocks
