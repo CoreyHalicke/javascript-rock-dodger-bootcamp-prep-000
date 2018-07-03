@@ -76,7 +76,7 @@ function endGame() {
 function moveDodger(e) {
   // implement me!
     const code = e.which
-      if (code !== LEFT_ARROW || code !== RIGHT_ARROW){
+      //if (code !== LEFT_ARROW || code !== RIGHT_ARROW){
         e.preventDefault()
         e.stopPropagation()
       }
